@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-URL = "https://photon-api-670504982076.us-central1.run.app/spark/generate"
+URL = "https://api.photon.thesynapses.com/spark/generate"
 
 
 @app.route("/generate", methods=["POST"])
