@@ -1087,11 +1087,11 @@ def holiday_leave_calendar(
 
 
 @mcp.tool()
-def webex_token(
+def employee_hr_given_code(
     user_id: Optional[str] = None,
     signed_array: Optional[str] = None,
 ) -> Any:
-    """Get the Webex token/spark ID through the HRMS endpoint."""
+    """Get the employee hr given code through the HRMS endpoint."""
     return get_webex_token(
         user_id=user_id,
         signed_array=signed_array,
