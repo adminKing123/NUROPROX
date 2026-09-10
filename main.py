@@ -1218,4 +1218,4 @@ if __name__ == "__main__":
     logger.info("Webex API configured: %s", bool(WEBEX_API_BASE))
     logger.info("========================================")
 
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="streamable-http", port=os.environ.get("PORT", 8000))
