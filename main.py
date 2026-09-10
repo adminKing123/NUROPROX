@@ -1209,7 +1209,7 @@ if __name__ == "__main__":
     logger.info("========================================")
     logger.info("Starting HRMS MCP Server")
     logger.info("Server name: %s", mcp.name)
-    logger.info("Transport: stdio")
+    logger.info("Transport: streamable-http")
     logger.info("Python: %s", sys.executable)
     logger.info("PID: %s", os.getpid())
     logger.info("Working directory: %s", os.getcwd())
@@ -1218,4 +1218,9 @@ if __name__ == "__main__":
     logger.info("Webex API configured: %s", bool(WEBEX_API_BASE))
     logger.info("========================================")
 
-    mcp.run(transport="streamable-http", port=os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 8000))
+
+    mcp.run(
+        transport="streamable-http",
+        port=port
+    )
