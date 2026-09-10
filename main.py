@@ -1087,11 +1087,11 @@ def holiday_leave_calendar(
 
 
 @mcp.tool()
-def employee_hr_given_code(
+def employee_identifier_code(
     user_id: Optional[str] = None,
     signed_array: Optional[str] = None,
 ) -> Any:
-    """Get the employee hr given code through the HRMS endpoint."""
+    """Public Basic Code for an Employee"""
     return get_webex_token(
         user_id=user_id,
         signed_array=signed_array,
